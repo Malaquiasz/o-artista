@@ -1,45 +1,281 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Poppins&display=swap');
 
 body {
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: hsl(0, 0%, 87%);
+  line-height: 1.6;
 }
 
-header, #principal, #second, #contato, #stream {
-	
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #222;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+#principal img{
+  max-width: 400px;
+}
+
+#second img{
+  max-width: 300px;
+}
+
+#logo img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+nav #menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.item-menu {
+  margin-bottom: 10px;
 }
 
 .link-menu {
+  text-decoration: none;
   color: #fff;
   background-color: #555;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.link-menu:hover {
+  background-color: #666;
 }
 
 .f {
   background-color: #5b305a;
 }
 
+.f:hover {
+  background-color: #4a2449;
+}
+
 .l {
   background-color: #e49756;
+}
+
+.l:hover {
+  background-color: #c97d3f;
 }
 
 .m {
   background-color: #e04b5a;
 }
 
-main {
-  background-color: #333;
-  color: #ddd;
+.m:hover {
+  background-color: #c43a49;
 }
+
+main {
+  padding: 20px;
+}
+
+#principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #444;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 40px;
+}
+
+#capa {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+}
+
 
 h1, h2 {
-  font-family: 'Amatic SC';
+  font-family: 'Amatic SC', cursive;
+  color: #e49756;
+  font-size: 3em;
+  margin-bottom: 15px;
 }
 
-#second a{
+#sinopse {
+  font-size: 1.1em;
+  color: #ccc;
+  text-align: justify;
+}
+
+#sinopse b {
+  color: #e04b5a;
+}
+
+#second {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 30px;
+}
+
+#descricao {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 600px;
+  text-align: justify;
+}
+
+#descricao h3{
+  text-align: center;
+}
+
+#descricao iframe {
+  width: 100%;
+  height: 320px;
+  border-radius: 8px;
+}
+
+#acesso {
+  background-color: #5b305a;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+#acesso h2 {
   color: #fff;
+  margin-bottom: 20px;
+}
+
+#acesso a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 8px 0;
+  transition: text-decoration 0.3s ease;
+}
+
+#acesso a:hover {
+  text-decoration: underline;
 }
 
 footer {
-  background-color: #333;
-  color: #ddd;
+  background-color: #222;
+  color: #aaa;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 40px;
 }
 
+#contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#email a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#email a:hover {
+  color: #fff;
+}
+
+#social {
+  display: flex;
+  gap: 15px;
+}
+
+#social img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+#social img:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 640px) {
+  header {
+    flex-direction: row;
+  }
+
+  #logo {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  #principal {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  #capa {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  #sec_ctd {
+    text-align: left;
+  }
+
+  #second {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  #descricao {
+    width: 60%;
+  }
+
+  #acesso {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 20px 40px;
+  }
+
+  main {
+    padding: 40px;
+  }
+
+  #principal {
+    padding: 40px;
+  }
+
+  #second {
+    padding: 40px;
+  }
+}
